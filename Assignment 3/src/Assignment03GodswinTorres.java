@@ -24,9 +24,11 @@ public class Assignment03GodswinTorres {
 			diceRolls[roll - 1] = diceRolls[roll - 1] + 1; // adjust 1-10 value to 0-9 for index
 		}	
 		// run a report
-		for(int index = 0; index <= diceRolls.length; index++) {  // crashes
+		for(int index = 0; index < diceRolls.length; index++) {  // crashes corrected
+			//change "<=" to "<" on the line 24: index < diceRolles.length
 			System.out.printf("Count of %d is: %d%n", (index + 1), diceRolls[index]);
 			totalRolls = totalRolls + diceRolls[index];
+
 		}
 		System.out.println("Total rolls were: " + totalRolls);
 		System.out.println("Program by Godswin Torres");
